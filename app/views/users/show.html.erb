@@ -2,13 +2,21 @@
 
 <p>
   <strong>Username:</strong>
-  <%= @user %>
+  <%= @user.username %>
 </p>
 
 <p>
   <strong>Email:</strong>
-  <%= @user.email %>
+  <%= @user.email.gsub(/@.+\./, '@*******.') %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+<% if @user.posts.empty? %>
+<p>
+  No Posts
+</p>
+<% else %>
+<%= render 'post', posts: @user.posts %>
+<% end %>

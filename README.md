@@ -1,9 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby 2.6.3 does not compile with latest OpenSSL 3.0
 
-Things you may want to cover:
+See https://www.reddit.com/r/ruby/comments/un9rn1/having_issues_installing_ruby/.
+
+## Usage
+
+```bash
+$ make image
+$ make enter
+$ make
+```
+
+## Original README
 
 * Ruby version
 

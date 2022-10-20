@@ -6,7 +6,7 @@ RSpec.describe 'delete a post', type: :system do
     User.create(:username => "Andrew", :email => "achalkley@ebay.com") 
   end
 
-  scenario 'deleting a post' do
+  scenario 'deleting a post', js: true do
     visit new_post_path
     fill_in "Title", with: "My Blog Post"
     fill_in "Body", with: "Hello world!\n\nThis is my first blog post."

@@ -1,5 +1,6 @@
 require 'simplecov'
 require 'webdrivers'
+require_relative 'capybara_config'
 
 SimpleCov.start "rails"
 

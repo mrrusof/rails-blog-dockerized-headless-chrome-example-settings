@@ -6,7 +6,7 @@ RSpec.describe 'delete a user', type: :system do
     User.create(:username => "Andrew", :email => "achalkley@example.com") 
   end
 
-  scenario 'deleting a user' do
+  scenario 'deleting a user', js: true do
     expect(User.count).to eq(1)
 
     visit users_path
